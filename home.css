@@ -1,0 +1,382 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular';
+}
+
+#main {
+
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    background-color: rgb(18, 129, 208);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.brand-logo{
+    margin-right: 20px;
+}
+
+
+
+#nav {
+    display: flex;
+    margin-right: auto;
+}
+#nav>li {
+    display: inline-block;
+}
+#nav li {
+    position: relative;
+}
+#nav>li>a {
+    color:white;
+}
+#nav li a {
+    text-decoration: none;
+    line-height: 50px;
+    display: block;
+    padding: 0 20px;
+}
+#nav>li:hover>a {
+    background-color: rgba(6, 1, 24, 0.805);
+    color:aqua;
+    padding: 0 50px;
+}
+#nav .subnav {
+    display: none;
+    position: absolute;
+    background-color: black;
+    box-shadow: 0 0 10px rgb(4, 4, 34);
+}
+#nav .subnav a {
+    color: antiquewhite;
+    padding: 0 39px;
+    line-height: 50px;
+}
+#nav li:hover .subnav {
+    display: block;
+}
+#nav .subnav li:hover a {
+    background-color: rgb(170, 170, 173);
+    color: rgb(243, 186, 14);
+}
+.subnav {
+    list-style-type: none;
+}
+#nav .ti-home, .ti-dribbble, .ti-medall-alt, .ti-bar-chart, .ti-angle-double-down {
+    padding-left: 5px;
+}
+#nav{
+    display: inline-block;
+}
+#nav, .subnav{
+    list-style-type: none;
+}
+
+
+
+#header .search-btn {
+    float: right;
+    padding: 0 20px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items:center;
+    border-radius: 30px;
+    background-color: rgb(121, 174, 235);
+    height: 60%;
+    margin-top: 10px;
+    margin-right: 50px;
+}
+#header .search-input{
+    margin-right: 20px;
+    vertical-align: middle;
+    width: 100px;
+    background-color:bisque;
+}
+
+#header .search-icon {
+    color:rgb(255, 255, 255);
+    font-size: 20px;
+    line-height: 50px;
+}
+#header .search-btn:hover{
+    background-color:rgb(136, 164, 164);
+}
+#header .network{
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    font-size: 20px;
+}
+#header .network a{
+    color: aliceblue;
+}
+
+
+
+
+
+#slider{
+    margin-top: 50px;
+    padding-top: 20%;
+    background-image: url(picture/picturesque.jpg), url(picture/14vleagueteam.jpg);
+    background-position: left, right;
+    background-size: 40% auto,60% auto;
+    background-repeat: no-repeat,no-repeat;
+    position: relative;
+    z-index: -1;
+}
+#slider::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    z-index: 1;
+}
+#slider .text-content{
+    position:absolute;
+    bottom: 10px;
+    color: aqua;
+    font-weight: 1000;
+    font-size: 20px;
+}
+#slider .text-heading{
+    
+}
+
+
+
+
+
+#content .content-section {
+    height: 2000px;
+    background-color: rgb(5, 5, 60);
+    color: aliceblue;
+}
+#content .content-section h2{
+    padding-top: 40px;
+    padding-left: 25px;
+}
+#content .content-section h2 a{
+    text-decoration: none;
+    color: antiquewhite;
+}
+#content .content-section h2 a:hover{
+    color:aliceblue;
+}
+
+#content .social-list{
+    background-color: rgb(5, 5, 60);
+    padding-left: 40px; 
+    padding-bottom: 20px;
+}
+#content .social-list a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 24px;
+    margin-right: 20px;
+}
+#content .social-list{
+    display: flex;
+}
+#content .social-list .os{
+    margin-left: auto;
+    padding-right: 24px;
+}
+
+
+
+
+
+#gradient-line{
+    height:2px;
+    background:linear-gradient(rgb(64, 83, 230),rgb(42, 213, 243))
+}
+#footer {
+    background-color:rgb(5, 5, 60);
+    height: 80px;
+    padding:20px 40px;
+    display: flex;
+}
+#footer p{
+    color:aliceblue;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+}
+#footer p:not(.copyright){
+    margin-right: 10px;
+}
+#footer p a{
+    color: aliceblue;
+    text-decoration: none;
+}
+#footer p a:hover{
+    text-decoration: underline;
+}
+#footer .copyright{
+    margin-left: auto;
+    text-align: right;
+}
+#footer .social-list{
+    font-size: 24px;
+}
+
+
+
+.match-list {
+    display: flex;
+    overflow-x: auto; /* Cho phép cuộn ngang */
+    gap: 10px; /* Khoảng cách giữa các trận đấu */
+    padding:50px 50px 20px 50px; /* Khoảng cách trên và dưới */
+    scrollbar-width:none; /* Tùy chọn: Giảm kích thước thanh cuộn trong Firefox */
+}
+
+/* Ẩn thanh cuộn trong WebKit (Chrome, Safari) */
+.match-list::-webkit-scrollbar {
+    height: 6px; /* Chiều cao thanh cuộn ngang */
+}
+.match-list::-webkit-scrollbar-thumb {
+    background-color: #888; /* Màu của thanh cuộn */
+    border-radius: 10px;
+}
+.match-list::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Màu khi hover vào thanh cuộn */
+}
+
+/* Định dạng từng trận đấu */
+.match-item {
+    min-width: 200px; /* Chiều rộng tối thiểu của mỗi item */
+    background-color: rgb(33, 28, 27); /* Màu nền của mỗi trận đấu */
+    border-radius: 10px; /* Bo tròn các góc */
+    padding:10px;
+    box-shadow: 0 4px 8px rgba(31, 30, 30, 0.1); /* Bóng mờ */
+    text-align: center;
+    font-size: 16px;
+    color:aqua;
+    cursor: pointer;
+    transition: transform 0.2s ease; /* Hiệu ứng khi hover */
+}
+
+.match-item:hover {
+    transform: scale(1.05); /* Phóng to nhẹ khi hover */
+    background-color: rgb(210, 230, 250); /* Đổi màu nền khi hover */
+}
+
+
+.match-item .channel1 img{
+    width: 100%;
+}
+.match-item .channel2 img{
+    width: 100%;
+    background-color: aliceblue;
+    height: 94px;
+}
+.match-item .channel3 img{
+    width: 100%;
+    background-color: aliceblue;
+    height: 94px;
+}
+.match-item .channel4 img{
+    width: 100%;
+    background-color: aliceblue;
+    height: 94px;
+}
+.match-item .channel5 img{
+    width: 100%;
+    background-color: aliceblue;
+    height: 94px;
+}
+.match-item .channel6 img{
+    width: 100%;
+    background-color: aliceblue;
+    height: 94px;
+}
+.match-item .channel7 img{
+    width: 100%;
+    background-color: aliceblue;
+    height: 94px;
+}
+.match-item .channel8 img{
+    width: 100%;
+    background-color: aliceblue;
+    height: 94px;
+}
+.match-item .channel9 img{
+    width: 100%;
+    background-color: aliceblue;
+    height: 94px;
+}
+.match-item .channel10 img{
+    width: 100%;
+    background-color: aliceblue;
+    height: 94px;
+}
+
+
+
+.highlight-list {
+    display: flex;
+    overflow-x: auto; /* Cho phép cuộn ngang */
+    gap: 10px; /* Khoảng cách giữa các trận đấu */
+    padding:50px 50px 20px 50px; /* Khoảng cách trên và dưới */
+    scrollbar-width:none; /* Tùy chọn: Giảm kích thước thanh cuộn trong Firefox */
+}
+/* Ẩn thanh cuộn trong WebKit (Chrome, Safari) */
+.highlight-list::-webkit-scrollbar {
+    height: 6px; /* Chiều cao thanh cuộn ngang */
+}
+.highlight-list::-webkit-scrollbar-thumb {
+    background-color: #888; /* Màu của thanh cuộn */
+    border-radius: 10px;
+}
+.highlight-list::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Màu khi hover vào thanh cuộn */
+}
+/* Định dạng từng trận đấu */
+.highlight-item {
+    min-width: 200px; /* Chiều rộng tối thiểu của mỗi item */
+    background-color: rgb(33, 28, 27); /* Màu nền của mỗi trận đấu */
+    border-radius: 10px; /* Bo tròn các góc */
+    padding:10px;
+    box-shadow: 0 4px 8px rgba(31, 30, 30, 0.1); /* Bóng mờ */
+    text-align: center;
+    font-size: 16px;
+    color:aqua;
+    cursor: pointer;
+    transition: transform 0.2s ease; /* Hiệu ứng khi hover */
+}
+.highlight-item:hover {
+    transform: scale(1.05); /* Phóng to nhẹ khi hover */
+    background-color: rgb(210, 230, 250); /* Đổi màu nền khi hover */
+}
+
+
+.highlight-item .highlight1 img{
+    width: 100%;
+    background-color: aliceblue;
+    height: 94px;
+}
+.highlight-item .highlight2 img{
+    width: 100%;
+    background-color: aliceblue;
+    height: 94px;
+}
+.highlight-item .highlight3 img{
+    width: 100%;
+    background-color: aliceblue;
+    height: 94px;
+}
