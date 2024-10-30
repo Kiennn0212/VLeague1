@@ -10,6 +10,9 @@ body{
 .main .word{
     margin-left: 50px;
 }
+.main .word h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 .signup-container {
     width: 520px;
     height: 515px;
