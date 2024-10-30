@@ -16,7 +16,7 @@ html {
     display: flex;
     justify-content: space-between;
     height: 50px;
-    background-color: rgb(5, 5, 60);
+    background-color:rgb(10, 30, 143);
     position: fixed;
     top: 0;
     left: 0;
@@ -163,7 +163,7 @@ html {
 
 
 #content .content-section {
-    height: 2000px;
+    height: 2500px;
     background-color: rgb(5, 5, 60);
     color: aliceblue;
 }
@@ -211,7 +211,7 @@ html {
 }
 #content .news .item .forimg img{
     width: 100%;
-    height: 170px;
+    height: 180px;
 }
 #content .news .item .forcontent{
     width: 100%;
@@ -219,7 +219,17 @@ html {
     padding: 20px;
     color: aqua;
     margin-top: 0;
-    height: 370px;
+    height: 320px;
+}
+h3{
+    margin-top: 20px;
+    margin-left: 50px;
+    font-size: 30px;
+    color: hotpink;
+}
+h4{
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 #content .news .item .forcontent p{
     color: aliceblue;
@@ -430,21 +440,16 @@ html {
 .highlight-item:hover {
     transform: scale(1.05); /* Phóng to nhẹ khi hover */
     background-color: rgb(210, 230, 250); /* Đổi màu nền khi hover */
+    color: #2f2a2a;
 }
 
-
-.highlight-item .highlight1 img{
-    width: 100%;
-    background-color: aliceblue;
-    height: 94px;
+.highlight-item .highlight1, .highlight-item .highlight2, .highlight-item .highlight3, .highlight-item .highlight4, .highlight-item .highlight5, .highlight-item .highlight6, .highlight-item .highlight7{
+    display: flex;
+    gap: 35px;
 }
-.highlight-item .highlight2 img{
-    width: 100%;
-    background-color: aliceblue;
-    height: 94px;
-}
-.highlight-item .highlight3 img{
-    width: 100%;
-    background-color: aliceblue;
-    height: 94px;
+.highlight-item .highlight1 img, .highlight-item .highlight2 img, .highlight-item .highlight3 img, .highlight-item .highlight4 img, .highlight-item .highlight5 img, .highlight-item .highlight6 img, .highlight-item .highlight7 img{
+    width: 40%;
+    height: 70px;
+    margin-top: 10px;
+    padding: 10px;
 }
