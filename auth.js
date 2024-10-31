@@ -39,3 +39,20 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+document.querySelector(".like-btn").addEventListener("click", function() {
+    let likeCountElement = document.getElementById("like-count");
+    let likeCount = parseInt(likeCountElement.innerText);
+    likeCountElement.innerText = likeCount + 1; // Tăng số lượt thích
+});
+
+// Xử lý sự kiện khi nhấn vào bình luận
+document.querySelector(".comment-btn").addEventListener("click", function() {
+    let comment = prompt("Nhập bình luận của bạn:"); // Mở hộp thoại để nhập bình luận
+    if (comment) {
+        let commentCountElement = document.getElementById("comment-count");
+        let commentCount = parseInt(commentCountElement.innerText);
+        commentCountElement.innerText = commentCount + 1; // Tăng số bình luận
+        alert("Bình luận của bạn đã được ghi nhận!");
+    }
+});
